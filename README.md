@@ -1,9 +1,9 @@
  
 
-##Project Title
+# Project Title
 •	Code for The Cure
 
-Team
+# Team
 •	Mike Lygas:
 o	D3.js
 o	
@@ -15,13 +15,13 @@ o	Tableau
 o	Transform and load data into MYSQL 
 
 
-Project Description
+# Project Description
 •	Short description 
 
-Timeframe
+# Timeframe
 
 
-Tech Used
+# Tech Used
 •	Javascript (d3, 
 •	HTML/CSS/Bootstrap
 •	Tableau
@@ -30,9 +30,6 @@ Tech Used
 •	Python Flask App
 
 
-Challenges & Successes
+# Challenges & Successes
 •	List challenges, successes, and what you want to continue to improve
-
-Instructions: Make a copy of this, fill out, print, and display with your project.
-
 
