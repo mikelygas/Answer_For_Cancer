@@ -1,7 +1,6 @@
  
 
-# Project Title
-## Code for The Cure
+# Project Title: ## Code for The Cure
 
 # Team
 •	Mike Lygas:
