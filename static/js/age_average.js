@@ -48,6 +48,7 @@ d3.json(url,function(err, data){
 // d3.csv("age_pivot.csv", function(error, data) {
 
     data.forEach(function(d) {
+        console.log(d);
         d.year = parseDate(d.year);
     });
     color.domain(d3.keys(data[0]).filter(function(key) {
