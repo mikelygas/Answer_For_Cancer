@@ -42,8 +42,10 @@ var svg = d3.select("#race-chart").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-
-d3.csv("race_pivot.csv", function(error, data) {
+var url = "/race-pivot"
+d3.json(url,function(err, data){ 
+    console.log(data);
+// d3.csv("race_pivot.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.year = parseDate(d.year);

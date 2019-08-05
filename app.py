@@ -1,15 +1,29 @@
 # Import dependencies
 import numpy as np
+import pandas as pd
+import json
+import os
 from flask import (
     Flask,
     render_template,
-    jsonify)
+    jsonify,
+    Response)
+from flask_mysqldb import MySQL
 from joblib import load
 from sklearn.datasets import load_breast_cancer
+
+
 
 # Set up Flask
 app = Flask(__name__)
 
+
+#MySQL configurations
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'cookies25'
+app.config['MYSQL_DB'] = 'breastcancer'
+app.config['MYSQL_HOST'] = 'localhost'
+mysql = MySQL(app)
 
 # home route
 @app.route("/")
@@ -106,6 +120,24 @@ def analyze(patientID):
         diagnosis = "Malignant"
 
     return jsonify(diagnosis)
+
+@app.route('/age-pivot')
+def age_pivot():
+        cur = mysql.connection
+        df = pd.read_sql('SELECT * FROM age_pivot', cur)
+
+        jsonfiles = json.loads(df.to_json(orient='records'))
+
+        return jsonify(jsonfiles)
+
+@app.route('/race-pivot')
+def race_pivot():
+        cur = mysql.connection
+        df = pd.read_sql('SELECT * FROM race_pivot', cur)
+
+        jsonfiles = json.loads(df.to_json(orient='records'))
+
+        return jsonify(jsonfiles)
 
 
 if __name__ == "__main__":

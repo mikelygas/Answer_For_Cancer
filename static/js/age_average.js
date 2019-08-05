@@ -42,8 +42,10 @@ var svg = d3.select("#age-chart").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-
-d3.csv("age_pivot.csv", function(error, data) {
+var url = "/age-pivot"
+d3.json(url,function(err, data){ 
+    console.log(data);
+// d3.csv("age_pivot.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.year = parseDate(d.year);
