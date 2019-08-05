@@ -1,7 +1,7 @@
  
 
 # Project Title
-- Code for The Cure
+## Code for The Cure
 
 # Team
 •	Mike Lygas:
@@ -10,26 +10,26 @@
 
 
 •	Parin Mody:
-o	HTML/CSS/Bootstrap
-o	Tableau
-o	Transform and load data into MYSQL 
+- HTML/CSS/Bootstrap
+- Tableau
+- Transform and load data into MYSQL 
 
 
 # Project Description
-•	Short description 
+- Short description 
 
 # Timeframe
 
 
 # Tech Used
-•	Javascript (d3, 
-•	HTML/CSS/Bootstrap
-•	Tableau
-•	MySQL
-•	Jupyter Notebook – Python – Pandas
-•	Python Flask App
+- Javascript (d3, 
+- HTML/CSS/Bootstrap
+- Tableau
+- MySQL
+- Jupyter Notebook – Python – Pandas
+- Python Flask App
 
 
 # Challenges & Successes
-•	List challenges, successes, and what you want to continue to improve
+- List challenges, successes, and what you want to continue to improve
 
