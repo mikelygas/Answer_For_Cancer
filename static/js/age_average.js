@@ -45,75 +45,12 @@ var svg = d3.select("#age-chart").append("svg")
 var url = "/age-pivot"
 d3.json(url,function(err, data){ 
     console.log(data);
-// d3.csv("age_pivot.csv", function(error, data) {
 
-    function unpack(data, key) {
-        return data.map(function(data) { return data[key]; });
-    }
-    var twenty_years = unpack(data, '20 - 29 years'),
-        thirty_years = unpack(data, '30 - 30 years'),
-        fourty_years = unpack(data, '40 - 49 years'),
-        fifty_years = unpack(data, '50 - 59 years'),
-        sixty_years = unpack(data, '60 - 69 years'),
-        seventy_years = unpack(data, '70 - 79 years'),
-        eigthy_years = unpack(data, '80 - 89 years'),
-        year = unpack(data, 'year'),
-        year_list = [],
-        twenty = [],
-        thirty = [],
-        fourty = [],
-        fifty = [],
-        sixty = [],
-        seventy = [],
-        eighty = [];
-   
-    // for (var i = 0; i < year.length; i++ ){
-    //     if (list.indexOf(year[i]) === -1 ){
-    //         list.push(year[i]);
-    //         }
-    //     }
-    // console.log(list);
-
-    function averageAge(currentYear) {
-        year_list = [];
-        twenty = [];
-        thirty = [];
-        fourty = [];
-        fifty = [];
-        sixty = [];
-        seventy = [];
-        eighty = [];
-       
-        for (var i = 0 ; i < year.length ; i++){
-            if (year[i] === currentYear[i]) {
-                year_list.push(year[i]);
-                twenty.push(twenty_years[i]);
-                thirty.push(thirty_years[i]);
-                fourty.push(fourty_years[i]);
-                fifty.push(fifty_years[i]);
-                sixty.push(sixty_years[i]);
-                seventy.push(seventy_years[i]);
-                eigthy.push(eigthy_years[i]);
-                console.log(twenty);
-
-            }
-        }
-    };
-        
-
-    for (var i = 0; i < twenty_years.length; i++ ){
-        if (twenty.indexOf(twenty_years[i]) === -1 ){
-           twenty.push(twenty_years[i]);
-            }
-        }
-    console.log(twenty);
 
     data.forEach(function(d) {
         console.log(d);
-        d.year = parseDate(d.year);
-        console.log(d.year);
+        d.year = parseDate(d.year.toString());
     });
-
     color.domain(d3.keys(data[0]).filter(function(key) {
         return key !== "year";
     }));
@@ -158,8 +95,9 @@ d3.json(url,function(err, data){
         .call(yAxis)
         .append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", ".71em")
+        .attr("y", 0 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text("Average Crude Rate");
 
@@ -236,8 +174,8 @@ d3.json(url,function(err, data){
                 .style("opacity", "0");
         })
         .on('mouseover', function() { // on mouse in show line, circles and text
-            d3.select(".mouse-line")
-                .style("opacity", "1");
+            $(".mouse-line")
+                .css("opacity", "1");
             d3.selectAll(".mouse-per-line circle")
                 .style("opacity", "1");
             d3.selectAll(".mouse-per-line text")
@@ -245,12 +183,10 @@ d3.json(url,function(err, data){
         })
         .on('mousemove', function() { // mouse moving over canvas
             var mouse = d3.mouse(this);
-            d3.select(".mouse-line")
-                .attr("d", function() {
-                    var d = "M" + mouse[0] + "," + height;
-                    d += " " + mouse[0] + "," + 0;
-                    return d;
-                });
+            var d = "M" + mouse[0] + "," + height;
+            d += " " + mouse[0] + "," + 0;
+            $(".mouse-line")
+                .attr("d", d);
 
             d3.selectAll(".mouse-per-line")
                 .attr("transform", function(d, i) {
