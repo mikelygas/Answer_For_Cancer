@@ -54,14 +54,6 @@ def calc():
 
     return render_template("calculator.html")
 
-
-@app.route("/cta")
-def cta():
-    """Renders call to action page"""
-
-    return render_template("cta.html")
-
-
 @app.route("/features/<patientID>")
 def features(patientID):
     """Returns list of features for given patient ID"""

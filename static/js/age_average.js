@@ -47,10 +47,73 @@ d3.json(url,function(err, data){
     console.log(data);
 // d3.csv("age_pivot.csv", function(error, data) {
 
+    function unpack(data, key) {
+        return data.map(function(data) { return data[key]; });
+    }
+    var twenty_years = unpack(data, '20 - 29 years'),
+        thirty_years = unpack(data, '30 - 30 years'),
+        fourty_years = unpack(data, '40 - 49 years'),
+        fifty_years = unpack(data, '50 - 59 years'),
+        sixty_years = unpack(data, '60 - 69 years'),
+        seventy_years = unpack(data, '70 - 79 years'),
+        eigthy_years = unpack(data, '80 - 89 years'),
+        year = unpack(data, 'year'),
+        year_list = [],
+        twenty = [],
+        thirty = [],
+        fourty = [],
+        fifty = [],
+        sixty = [],
+        seventy = [],
+        eighty = [];
+   
+    // for (var i = 0; i < year.length; i++ ){
+    //     if (list.indexOf(year[i]) === -1 ){
+    //         list.push(year[i]);
+    //         }
+    //     }
+    // console.log(list);
+
+    function averageAge(currentYear) {
+        year_list = [];
+        twenty = [];
+        thirty = [];
+        fourty = [];
+        fifty = [];
+        sixty = [];
+        seventy = [];
+        eighty = [];
+       
+        for (var i = 0 ; i < year.length ; i++){
+            if (year[i] === currentYear[i]) {
+                year_list.push(year[i]);
+                twenty.push(twenty_years[i]);
+                thirty.push(thirty_years[i]);
+                fourty.push(fourty_years[i]);
+                fifty.push(fifty_years[i]);
+                sixty.push(sixty_years[i]);
+                seventy.push(seventy_years[i]);
+                eigthy.push(eigthy_years[i]);
+                console.log(twenty);
+
+            }
+        }
+    };
+        
+
+    for (var i = 0; i < twenty_years.length; i++ ){
+        if (twenty.indexOf(twenty_years[i]) === -1 ){
+           twenty.push(twenty_years[i]);
+            }
+        }
+    console.log(twenty);
+
     data.forEach(function(d) {
         console.log(d);
         d.year = parseDate(d.year);
+        console.log(d.year);
     });
+
     color.domain(d3.keys(data[0]).filter(function(key) {
         return key !== "year";
     }));
