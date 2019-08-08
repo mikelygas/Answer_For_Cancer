@@ -4,6 +4,7 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" />
       <link rel="stylesheet" href="../static/css/style.css">
+      <link rel="stylesheet" href="../static/css/charts_style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code for The Cure!</title>
@@ -64,6 +65,17 @@
     <!--  TABLEAU CODE END -->
 
 <!-- D3 -->
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+      <div class="graph-title">
+          <h3>Average Crude Rate by State test</h3>
+      </div>
+      <div id="map"></div>
+  </div>
+</div>
+
     <div class="row">
           <div class="col-md-3"></div>
           <div class="col-md-6">
@@ -87,6 +99,8 @@
               <div id="age-chart"></div>
           </div>
       </div>
+
+      
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="http://d3js.org/d3.v3.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
@@ -94,6 +108,7 @@
       <script src="/datasets/age_average.js"></script> -->
       <script src="{{url_for('static', filename='js/age_average.js')}}"></script>
       <script src="{{url_for('static', filename='js/race_average.js')}}"></script>
+      <script src="{{url_for('static', filename='js/map.js')}}"></script>
 
 
    

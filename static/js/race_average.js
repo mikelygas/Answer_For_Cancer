@@ -45,10 +45,10 @@ var svg = d3.select("#race-chart").append("svg")
 var url = "/race-pivot"
 d3.json(url,function(err, data){ 
     console.log(data);
-// d3.csv("race_pivot.csv", function(error, data) {
+
 
     data.forEach(function(d) {
-        d.year = parseDate(d.year);
+        d.year = parseDate(d.year.toString());
     });
     color.domain(d3.keys(data[0]).filter(function(key) {
         return key !== "year";
@@ -83,31 +83,7 @@ d3.json(url,function(err, data){
         })
     ]);
 
-    /*var legend = svg.selectAll('g')
-      .data(cities)
-      .enter()
-      .append('g')
-      .attr('class', 'legend');
-
-    legend.append('rect')
-      .attr('x', width - 20)
-      .attr('y', function(d, i) {
-        return i * 20;
-      })
-      .attr('width', 10)
-      .attr('height', 6)
-      .style('fill', function(d) {
-        return color(d.name);
-      });
-
-    legend.append('text')
-      .attr('x', width - 8)
-      .attr('y', function(d, i) {
-        return (i * 20) + 9;
-      })
-      .text(function(d) {
-        return d.name;
-      });*/
+  
 
     svg.append("g")
         .attr("class", "x axis")
@@ -119,8 +95,9 @@ d3.json(url,function(err, data){
         .call(yAxis)
         .append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", ".71em")
+        .attr("y", 0 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text("Average Crude Rate");
 
@@ -197,8 +174,8 @@ d3.json(url,function(err, data){
                 .style("opacity", "0");
         })
         .on('mouseover', function() { // on mouse in show line, circles and text
-            d3.select(".mouse-line")
-                .style("opacity", "1");
+            $(".mouse-line")
+                .css("opacity", "1");
             d3.selectAll(".mouse-per-line circle")
                 .style("opacity", "1");
             d3.selectAll(".mouse-per-line text")
@@ -206,12 +183,10 @@ d3.json(url,function(err, data){
         })
         .on('mousemove', function() { // mouse moving over canvas
             var mouse = d3.mouse(this);
-            d3.select(".mouse-line")
-                .attr("d", function() {
-                    var d = "M" + mouse[0] + "," + height;
-                    d += " " + mouse[0] + "," + 0;
-                    return d;
-                });
+            var d = "M" + mouse[0] + "," + height;
+            d += " " + mouse[0] + "," + 0;
+            $(".mouse-line")
+                .attr("d", d);
 
             d3.selectAll(".mouse-per-line")
                 .attr("transform", function(d, i) {
