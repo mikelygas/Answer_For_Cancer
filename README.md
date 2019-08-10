@@ -45,12 +45,12 @@
 
 # Challenges & Successes
 - Challenges: 
- - Finding usable dataset records
- -
+  - Finding usable dataset records
+  -
 
 - Successes:
- - Building out a usable database
- - Accuracy of machine learning 
+  - Building out a usable database
+  - Accuracy of machine learning 
 
 - Improvements: 
- - Sentiment analysis of patient concerns over turnaround time
+  - Sentiment analysis of patient concerns over turnaround time
