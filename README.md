@@ -26,7 +26,7 @@
 
 
 # Project Description
-- Short description 
+- It’s known that breast biopsy results take multiple days. We came up with a machine learning app that calculates breast biopsy results within minutes with a 95% accuracy rate. This allows for immediate diagnosis and treatment, alleviating anxiety over long turnaround time and allows for the doctor to speak to the patient about treatment options on the spot.
 
 # Timeframe
 - 2 to 3 weeks
@@ -42,12 +42,10 @@
 - Machine Learning 
 
 
-
 # Challenges & Successes
 - Challenges: 
   - Finding usable dataset records
-  -
-
+  
 - Successes:
   - Building out a usable database
   - Accuracy of machine learning 
