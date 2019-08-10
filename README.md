@@ -13,22 +13,34 @@
 - Tableau
 - Transform and load data into MYSQL 
 
+• Smita Sharma:
+- HTML/CSS/Bootstrap
+- Tableau
+- Transform and load data into MYSQL 
+
 
 # Project Description
 - Short description 
 
 # Timeframe
-
+- 2 to 3 weeks
 
 # Tech Used
-- Javascript (d3, 
+- Javascript (d3,jquery)
 - HTML/CSS/Bootstrap
+- Foundation HTML
 - Tableau
 - MySQL
 - Jupyter Notebook – Python – Pandas
 - Python Flask App
+- Machine Learning 
+
 
 
 # Challenges & Successes
-- List challenges, successes, and what you want to continue to improve
+- Challenges:
+
+- Successes:
+
+- Improvements: 
 
