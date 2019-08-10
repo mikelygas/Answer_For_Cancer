@@ -118,8 +118,8 @@ label {
 /* Buttons */
 
 .button {
-  background-color: #3b0b58;
-  color: #fff3f7;
+  background-color: #ee0471;
+  color: #fff3f7
 }
 .button:hover,
 .button:focus {
@@ -167,11 +167,12 @@ label {
 /* Demo */
 
 .how-container {
-  color: #3b0b58;
+  color: #2e0141;
   /* background-color: hsla(53, 80%, 79%, 0.45); */
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 25px
 }
+
 
 .demo-container th {
   text-align: center;
