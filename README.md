@@ -4,19 +4,25 @@
 
 # Team
 •	Mike Lygas:
-- D3.js
-- 
-
+- HTML/CSS/Bootstrap
+- Tableau
+- Cleaning up data using Pandas
+- Transform and load data into MYSQL 
+- D3.js, jquery
 
 •	Parin Mody:
 - HTML/CSS/Bootstrap
 - Tableau
+- Cleaning up data using Pandas
 - Transform and load data into MYSQL 
+- D3.js, jquery
 
 • Smita Sharma:
 - HTML/CSS/Bootstrap
 - Tableau
+- Cleaning up data using Pandas
 - Transform and load data into MYSQL 
+- D3.js, jquery
 
 
 # Project Description
@@ -38,9 +44,13 @@
 
 
 # Challenges & Successes
-- Challenges:
+- Challenges: 
+ - Finding usable dataset records
+ -
 
 - Successes:
+ - Building out a usable database
+ - Accuracy of machine learning 
 
 - Improvements: 
-
+ - Sentiment analysis of patient concerns over turnaround time
