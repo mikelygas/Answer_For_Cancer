@@ -1,6 +1,6 @@
  
 
-# Project Title: Code for The Cure
+# Project Title: Answer for Cancer
 
 # Team
 •	Mike Lygas
