@@ -3,27 +3,11 @@
 # Project Title: Code for The Cure
 
 # Team
-•	Mike Lygas:
-- HTML/CSS/Bootstrap
-- Tableau
-- Cleaning up data using Pandas
-- Transform and load data into MYSQL 
-- D3.js, jquery
-
-•	Parin Mody:
-- HTML/CSS/Bootstrap
-- Tableau
-- Cleaning up data using Pandas
-- Transform and load data into MYSQL 
-- D3.js, jquery
-
-• Smita Sharma:
-- HTML/CSS/Bootstrap
-- Tableau
-- Cleaning up data using Pandas
-- Transform and load data into MYSQL 
-- D3.js, jquery
-
+•	Mike Lygas
+•	Parin Mody
+• Smita Sharma
+•	Gretel Uptegrove
+•	Sonya Bogoslavskaya
 
 # Project Description
 - It’s known that breast biopsy results take multiple days. We came up with a machine learning app that calculates breast biopsy results within minutes with a 95% accuracy rate. This allows for immediate diagnosis and treatment, alleviating anxiety over long turnaround time and allows for the doctor to speak to the patient about treatment options on the spot.
@@ -39,8 +23,7 @@
 - MySQL
 - Jupyter Notebook – Python – Pandas
 - Python Flask App
-- Machine Learning 
-
+- Machine Learning (Stochastic Gradient Design, Support Vector Machines (SVC, NuSVC, LinearSVC), Nearest Neighbors, Naive Bayes, Random Forest and Trees Method)
 
 # Challenges & Successes
 - Challenges: 
